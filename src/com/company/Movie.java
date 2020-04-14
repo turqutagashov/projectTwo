@@ -12,4 +12,9 @@ public class Movie extends Product{
         return director;
     }
 
+    public void information(){
+        System.out.printf("MOVIE NAME: %s\n", getTitle());
+        System.out.printf("DIRECTOR: %s\n", getDirector());
+        System.out.printf("PRICE: %s\n", getPrice());
+    }
 }

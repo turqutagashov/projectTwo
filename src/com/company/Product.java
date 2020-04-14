@@ -33,4 +33,9 @@ public class Product {
     public void download(){
         System.out.println("The product is downloaded.");
     }
+
+    public void information(){
+        System.out.printf("NAME: %s\n", getTitle());
+        System.out.printf("PRICE: %s$\n", getPrice());
+    }
 }

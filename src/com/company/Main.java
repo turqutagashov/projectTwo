@@ -30,161 +30,150 @@ public class Main {
         movieList.add(movieThree.getTitle());
 
 	    greeting();
-	    options();
+	    try{
+            options();
 
-        int option = scanner.nextInt();
+            int option = scanner.nextInt();
 
-        switch (option){
-            case 1:
-                System.out.println("-----Books-----");
+            switch (option) {
+                case 1:
+                    System.out.println("------Books------");
 
-                for(int i = 0; i < library.size(); i++){
-                    System.out.printf("%s. %s\n", i+1, library.get(i));
-                }
+                    for (int i = 0; i < library.size(); i++) {
+                        System.out.printf("%s. %s\n", i + 1, library.get(i));
+                    }
 
-                option = scanner.nextInt();
+                    option = scanner.nextInt();
 
-                switch (option){
-                    case 1:
-                        System.out.printf("BOOK TITLE: %s\n", bookOne.getTitle());
-                        System.out.printf("AUTHOR: %s\n", bookOne.getAuthor());
-                        System.out.printf("GENRE: %s\n", bookOne.getGenre());
-                        System.out.printf("PRICE: %s$\n", bookOne.getPrice());
+                    switch (option) {
+                        case 1:
+                            bookOne.information();
 
-                        purchaseOrDownload();
+                            purchaseOrDownload();
 
-                        option = scanner.nextInt();
+                            option = scanner.nextInt();
 
-                        switch (option){
-                            case 1:
-                                bookOne.purchase();
-                                break;
-                            case 2:
-                                bookOne.download();
-                                break;
-                        }
+                            switch (option) {
+                                case 1:
+                                    bookOne.purchase();
+                                    break;
+                                case 2:
+                                    bookOne.download();
+                                    break;
+                            }
 
-                        break;
-                    case 2:
-                        System.out.printf("BOOK TITLE: %s\n", bookTwo.getTitle());
-                        System.out.printf("AUTHOR: %s\n", bookTwo.getAuthor());
-                        System.out.printf("GENRE: %s\n", bookTwo.getGenre());
-                        System.out.printf("PRICE: %s$\n", bookTwo.getPrice());
+                            break;
+                        case 2:
+                            bookTwo.information();
 
-                        purchaseOrDownload();
+                            purchaseOrDownload();
 
-                        option = scanner.nextInt();
+                            option = scanner.nextInt();
 
-                        switch (option){
-                            case 1:
-                                bookOne.purchase();
-                                break;
-                            case 2:
-                                bookOne.download();
-                                break;
-                        }
+                            switch (option) {
+                                case 1:
+                                    bookOne.purchase();
+                                    break;
+                                case 2:
+                                    bookOne.download();
+                                    break;
+                            }
 
-                        break;
-                    case 3:
-                        System.out.printf("BOOK TITLE: %s\n", bookThree.getTitle());
-                        System.out.printf("AUTHOR: %s\n", bookThree.getAuthor());
-                        System.out.printf("GENRE: %s\n", bookThree.getGenre());
-                        System.out.printf("PRICE: %s$\n", bookThree.getPrice());
+                            break;
+                        case 3:
+                            bookThree.information();
 
-                        purchaseOrDownload();
+                            purchaseOrDownload();
 
-                        option = scanner.nextInt();
+                            option = scanner.nextInt();
 
-                        switch (option){
-                            case 1:
-                                bookOne.purchase();
-                                break;
-                            case 2:
-                                bookOne.download();
-                                break;
-                        }
+                            switch (option) {
+                                case 1:
+                                    bookOne.purchase();
+                                    break;
+                                case 2:
+                                    bookOne.download();
+                                    break;
+                            }
 
-                        break;
-                }
+                            break;
+                    }
 
-                break;
-            case 2:
-                System.out.println("-----Movies-----");
+                    break;
+                case 2:
+                    System.out.println("------Movies------");
 
-                for(int i = 0; i < movieList.size(); i++){
-                    System.out.printf("%s. %s\n", i+1, movieList.get(i));
-                }
+                    for (int i = 0; i < movieList.size(); i++) {
+                        System.out.printf("%s. %s\n", i + 1, movieList.get(i));
+                    }
 
-                option = scanner.nextInt();
+                    option = scanner.nextInt();
 
-                switch (option){
-                    case 1:
-                        System.out.printf("MOVIE NAME: %s\n", movieOne.getTitle());
-                        System.out.printf("DIRECTOR: %s\n", movieOne.getDirector());
-                        System.out.printf("PRICE: %s$\n", movieOne.getPrice());
+                    switch (option) {
+                        case 1:
+                            movieOne.information();
 
-                        purchaseOrDownload();
+                            purchaseOrDownload();
 
-                        option = scanner.nextInt();
+                            option = scanner.nextInt();
 
-                        switch (option){
-                            case 1:
-                                movieOne.purchase();
-                                break;
-                            case 2:
-                                movieOne.download();
-                                break;
-                        }
+                            switch (option) {
+                                case 1:
+                                    movieOne.purchase();
+                                    break;
+                                case 2:
+                                    movieOne.download();
+                                    break;
+                            }
 
-                        break;
-                    case 2:
-                        System.out.printf("MOVIE NAME: %s\n", movieTwo.getTitle());
-                        System.out.printf("DIRECTOR: %s\n", movieTwo.getDirector());
-                        System.out.printf("PRICE: %s$\n", movieTwo.getPrice());
+                            break;
+                        case 2:
+                            movieTwo.information();
 
-                        purchaseOrDownload();
+                            purchaseOrDownload();
 
-                        option = scanner.nextInt();
+                            option = scanner.nextInt();
 
-                        switch (option){
-                            case 1:
-                                movieTwo.purchase();
-                                break;
-                            case 2:
-                                movieTwo.download();
-                                break;
-                        }
+                            switch (option) {
+                                case 1:
+                                    movieTwo.purchase();
+                                    break;
+                                case 2:
+                                    movieTwo.download();
+                                    break;
+                            }
 
-                        break;
-                    case 3:
-                        System.out.printf("MOVIE NAME: %s\n", movieThree.getTitle());
-                        System.out.printf("DIRECTOR: %s\n", movieThree.getDirector());
-                        System.out.printf("PRICE: %s$\n", movieThree.getPrice());
+                            break;
+                        case 3:
+                            movieThree.information();
 
-                        purchaseOrDownload();
+                            purchaseOrDownload();
 
-                        option = scanner.nextInt();
+                            option = scanner.nextInt();
 
-                        switch (option){
-                            case 1:
-                                movieThree.purchase();
-                                break;
-                            case 2:
-                                movieThree.download();
-                                break;
-                        }
+                            switch (option) {
+                                case 1:
+                                    movieThree.purchase();
+                                    break;
+                                case 2:
+                                    movieThree.download();
+                                    break;
+                            }
 
-                        break;
-                }
+                            break;
+                    }
 
-                break;
+                    break;
+            }
 
+        } catch (Exception e){
+            System.out.println("SOMETHING WENT WRONG!!!");
         }
 
     }
 
     static void greeting(){
-        System.out.println("Welcome!!!");
+        System.out.println("----Welcome!!!----");
     }
 
     static void options(){

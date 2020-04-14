@@ -20,4 +20,11 @@ public class Book extends Product{
         return genre;
     }
 
+    public void information(){
+        System.out.printf("BOOK NAME: %s\n", getTitle());
+        System.out.printf("AUTHOR: %s\n", getAuthor());
+        System.out.printf("GENRE: %s\n", getGenre());
+        System.out.printf("PRICE: %s\n", getPrice());
+    }
+
 }
