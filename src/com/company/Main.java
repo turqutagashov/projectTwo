@@ -9,25 +9,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<String> library = new ArrayList<>();
+        ArrayList<Product> library = new ArrayList<>();
 
-        Book bookOne = new Book("Arthur Konan Doyle", "Criminal", "Sherlock Holmes", 4.5);
-        Book bookTwo = new Book("Victor Hugo", "Fiction", "The Miserables", 9.99);
-        Book bookThree = new Book("Robert Kiyosaki", "Business", "Rich Dad Poor Dad", 7.59);
+        Product bookOne = new Book("Arthur Konan Doyle", "Criminal", "Sherlock Holmes", 4.5);
+        Product bookTwo = new Book("Victor Hugo", "Fiction", "The Miserables", 9.99);
+        Product bookThree = new Book("Robert Kiyosaki", "Business", "Rich Dad Poor Dad", 7.59);
 
-        library.add(bookOne.getTitle());
-        library.add(bookTwo.getTitle());
-        library.add(bookThree.getTitle());
+        library.add(bookOne);
+        library.add(bookTwo);
+        library.add(bookThree);
 
-        ArrayList<String> movieList = new ArrayList<>();
+        ArrayList<Product> movieList = new ArrayList<>();
 
-        Movie movieOne = new Movie("Interstellar", 13.99, "Christopher Nolan");
-        Movie movieTwo = new Movie("Leon", 9.99, "Luc Besson");
-        Movie movieThree = new Movie("Shawshank Redemption", 12.59, "Frank Darabont");
+        Product movieOne = new Movie("Interstellar", 13.99, "Christopher Nolan");
+        Product movieTwo = new Movie("Leon", 9.99, "Luc Besson");
+        Product movieThree = new Movie("Shawshank Redemption", 12.59, "Frank Darabont");
 
-        movieList.add(movieOne.getTitle());
-        movieList.add(movieTwo.getTitle());
-        movieList.add(movieThree.getTitle());
+        movieList.add(movieOne);
+        movieList.add(movieTwo);
+        movieList.add(movieThree);
 
 	    greeting();
 	    try{
@@ -40,7 +40,7 @@ public class Main {
                     System.out.println("------Books------");
 
                     for (int i = 0; i < library.size(); i++) {
-                        System.out.printf("%s. %s\n", i + 1, library.get(i));
+                        System.out.printf("%s. %s\n", i + 1, library.get(i).getTitle());
                     }
 
                     option = scanner.nextInt();
@@ -104,7 +104,7 @@ public class Main {
                     System.out.println("------Movies------");
 
                     for (int i = 0; i < movieList.size(); i++) {
-                        System.out.printf("%s. %s\n", i + 1, movieList.get(i));
+                        System.out.printf("%s. %s\n", i + 1, movieList.get(i).getTitle());
                     }
 
                     option = scanner.nextInt();
@@ -177,11 +177,9 @@ public class Main {
     }
 
     static void options(){
-
         System.out.println("Categories:");
         System.out.println("\t1. Books");
         System.out.println("\t2. Movies");
-
     }
 
     static void purchaseOrDownload(){
